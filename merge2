@@ -1,0 +1,6 @@
+let merge s1 s2 = (not Isstring s1) & (not Isstring s2) -> 'error' | 
+mergeSub '' s1 s2 where
+rec mergeSub s s1 s2 = (Stem s1) eq ''-> Conc s s2| (Stem s2) eq '' -> Conc s s1 |
+(Stem s1) ge (Stem s2) -> mergeSub (Conc s (Stem s2)) s1 (Stern s2) | mergeSub (Conc s (Stem s1)) (Stern s1) s2
+in 
+Print(merge 'acegh' 'bdfi')
