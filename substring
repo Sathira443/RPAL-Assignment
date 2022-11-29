@@ -1,0 +1,12 @@
+let rec substring s x y = x eq y -> s | substring (Stern s) x (y+1) 
+in
+let rec finalstring s x y = x eq y -> (Stem s) |  (Conc (Stem s) (finalstring (Stern s) x (y+1))) 
+in 
+let getSubString s n m = (finalstring (substring s n 1) m 1)
+in
+let rec getLength s length = s eq '' -> length | getLength (Stern s) (length+1)
+in
+let checkErrors s n m =  m le 0  -> 'm Less than 0' | n le 0  -> 'n Less than 0' | (getLength s 0) le (n+m)  -> 'Not in Range' |  
+     Isstring s -> (getSubString s n m)| 'Not String' 
+in
+Print(checkErrors 'sathiraliyana' 2 4)

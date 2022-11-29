@@ -1,0 +1,3 @@
+let rec getLenght s length = s eq '' -> length | getLenght (Stern s) (length+1)
+in
+Print(getLenght 'athiraliyanapathirana' 0)
